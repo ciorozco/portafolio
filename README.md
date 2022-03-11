@@ -1,4 +1,4 @@
-# portafolio
+# Portafolio (NodeJS + Angular + MongoDB)
 
 ![Screenshot from 2022-03-11 02-41-44](https://user-images.githubusercontent.com/27923284/157809461-9f1028ae-437b-4eeb-9517-79a07352c070.png)
 

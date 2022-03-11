@@ -1,0 +1,26 @@
+<h5> Proyectos </h5>
+
+<a class="btn btn-success" [routerLink]="['/crear-proyecto']"> Nuevo </a>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">  </th>
+        <th scope="col"> Título </th>
+        <th scope="col"> Año </th>
+        <th scope="col"> Acciones </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects">
+        <th> <img *ngIf="project.image" src="{{ url + 'api/get-image/' + project.image }}" width="150px" heigth="150px"/> </th>
+        <td> {{ project.name }} </td>
+        <td> {{ project.year }} </td>
+        <td>
+            <a class="btn btn-secondary mr-2" [routerLink]="['/detalle-proyecto', project._id]"> Mostrar </a> {{" "}}
+            <a class="btn btn-primary mr-2" [routerLink]="['/editar-proyecto', project._id]"> Editar </a> {{" "}}
+            <a class="btn btn-danger" (click)="deleteProject(project._id)"> Eliminar </a>
+        </td>
+      </tr>
+    </tbody>
+</table>
